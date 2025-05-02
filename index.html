@@ -6,28 +6,157 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>華安車業</title>
   <style>
-    body { margin: 0; font-family: 'Segoe UI', sans-serif; }
-    header { background-color: #e6f6ff; text-align: center; padding: 1rem; }
-    .logo { font-size: 2.5rem; font-weight: bold; }
-    nav { display: flex; justify-content: center; gap: 1rem; padding: 1rem; background: #f9f9f9; }
-    nav a { text-decoration: none; color: #333; font-weight: bold; }
-    .hero { text-align: center; padding: 2rem; }
-    .contact-btn { margin-top: 1rem; padding: 0.75rem 1.5rem; border: 2px solid #333; background: none; font-weight: bold; cursor: pointer; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    header {
+      background-color: #e6f6ff;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .menu-btn {
+      font-size: 1.5rem;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    nav {
+      display: none;
+      flex-direction: column;
+      background-color: #fff;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      border-top: 1px solid #ccc;
+    }
+
+    nav a {
+      padding: 1rem;
+      text-decoration: none;
+      color: #333;
+    }
+
+    nav a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .hero {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .hero h2 {
+      color: #666;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      line-height: 1.6;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .contact-btn {
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid #333;
+      background: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .footer-img {
+      margin-top: 2rem;
+      background-color: #e6f6ff;
+      padding: 4rem;
+      text-align: center;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .social-icons a {
+      text-decoration: none;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    @media(min-width: 768px) {
+      nav {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        border: none;
+      }
+
+      .menu-btn {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
-  <header><div class="logo">華安車業</div></header>
-  <nav>
+
+<header>
+  <div class="logo" style="font-size: 2.5rem; font-weight: bold; margin: auto; text-align: center;">華安車業</div>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <nav id="menu">
     <a href="routes.html">行程推薦</a>
     <a href="prices.html">行程價格</a>
     <a href="vehicles.html">車子照片</a>
     <a href="contact.html">聯絡我們</a>
   </nav>
-  <div class="hero">
-    <h1>安全、貼心、值得信賴</h1>
-    <h2>長者出行的最佳夥伴</h2>
-    <p>華安車業致力於提供專為銀髮族設計的接送服務。從機場到醫院、從家門到市場，我們不只載你前往目的地，更用心守護每一段旅程。</p>
-    <a href="contact.html"><button class="contact-btn">聯絡我們</button></a>
+</header>
+
+<section class="hero">
+  <h1>【待編輯：主標題】</h1>
+  <h2>【待編輯：副標題】</h2>
+  <p>【待編輯：內文段落】</p>
+  <a href="contact.html"><button class="contact-btn">聯絡我們</button></a>
+</section>
+
+<section class="footer-img">
+  <div>圖片區塊</div>
+  <div class="social-icons">
+    <a href="#">f</a>
+    <a href="#">t</a>
+    <a href="#">i</a>
   </div>
+</section>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+  }
+</script>
+
 </body>
 </html>
