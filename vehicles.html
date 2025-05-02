@@ -6,55 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>車子照片 - 華安車業</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #ffffff;
-      color: #333;
-    }
-
-    header {
-      background-color: #e6f6ff;
-      padding: 1rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 2.5rem;
-      font-weight: bold;
-      text-align: center;
-    }
-
-    .content {
-      padding: 2rem;
-      text-align: center;
-    }
-
-    .content h1 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
-
-    .content p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      max-width: 600px;
-      margin: auto;
-    }
+    body { margin: 0; font-family: 'Segoe UI', sans-serif; background-color: #ffffff; color: #333; }
+    header { background-color: #e6f6ff; padding: 1rem; text-align: center; }
+    .logo { font-size: 2.5rem; font-weight: bold; }
+    .content { padding: 2rem; text-align: center; }
+    .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+    .gallery img { max-width: 100%; height: auto; width: 300px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); }
   </style>
 </head>
 <body>
-
-<header>
-  <div class="logo">華安車業</div>
-</header>
-
-<div class="content">
-  <h1>車子照片</h1>
-  <p>我們使用的車輛照片展示，乾淨舒適，值得信賴。</p>
-</div>
-
+  <header><div class="logo">華安車業</div></header>
+  <div class="content">
+    <h1>車子照片</h1>
+    <p>大T Hello Kitty 為主題的福斯，內裝豪華，舒適安全，歡迎預約體驗！</p>
+    <div class="gallery">
+      <img src="car1.jpg" alt="車外觀1" />
+      <img src="car2.jpg" alt="車內裝1" />
+      <img src="car3.jpg" alt="車內裝2" />
+      <img src="car4.jpg" alt="車內裝3" />
+      <img src="car5.jpg" alt="車內裝4" />
+      <img src="car6.jpg" alt="車內裝5" />
+    </div>
+  </div>
 </body>
 </html>
