@@ -4,29 +4,86 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>車子照片 - 華安車業</title>
+  <title>車輛介紹｜華安車隊</title>
   <style>
-    body { margin: 0; font-family: 'Segoe UI', sans-serif; background-color: #ffffff; color: #333; }
-    header { background-color: #e6f6ff; padding: 1rem; text-align: center; }
-    .logo { font-size: 2.5rem; font-weight: bold; }
-    .content { padding: 2rem; text-align: center; }
-    .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
-    .gallery img { max-width: 100%; height: auto; width: 300px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); }
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f0f8ff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #5cb2e5;
+      padding: 1rem;
+      text-align: center;
+      color: white;
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+    .vehicle-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+    .vehicle-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s;
+    }
+    .vehicle-card:hover {
+      transform: translateY(-5px);
+    }
+    .vehicle-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .vehicle-info {
+      padding: 1rem;
+    }
+    .vehicle-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+    .vehicle-desc {
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #777;
+      font-size: 0.85rem;
+    }
   </style>
 </head>
 <body>
-  <header><div class="logo">華安車業</div></header>
-  <div class="content">
-    <h1>車子照片</h1>
-    <p>大T Hello Kitty 為主題的福斯，內裝豪華，舒適安全，歡迎預約體驗！</p>
-    <div class="gallery">
-      <img src="car1.jpg" alt="車外觀1" />
-      <img src="car2.jpg" alt="車內裝1" />
-      <img src="car3.jpg" alt="車內裝2" />
-      <img src="car4.jpg" alt="車內裝3" />
-      <img src="car5.jpg" alt="車內裝4" />
-      <img src="car6.jpg" alt="車內裝5" />
-    </div>
+  <header>華安車隊・車輛介紹</header>
+  <div class="vehicle-section">
+    <!-- 大T（前六張） -->
+    <div class="vehicle-card"><img src="images/car01.jpg" alt="大T"><div class="vehicle-info"><div class="vehicle-title">大T（福斯）</div><div class="vehicle-desc">航空椅、卡拉OK、氣氛燈、Hello Kitty 風格、智能觸屏、小冰箱，夢幻又舒適的行動KTV。</div></div></div>
+    <div class="vehicle-card"><img src="images/car02.jpg" alt="大T"><div class="vehicle-info"><div class="vehicle-title">大T（福斯）</div><div class="vehicle-desc">同上配置</div></div></div>
+    <div class="vehicle-card"><img src="images/car03.jpg" alt="大T"><div class="vehicle-info"><div class="vehicle-title">大T（福斯）</div><div class="vehicle-desc">同上配置</div></div></div>
+    <div class="vehicle-card"><img src="images/car04.jpg" alt="大T"><div class="vehicle-info"><div class="vehicle-title">大T（福斯）</div><div class="vehicle-desc">同上配置</div></div></div>
+    <div class="vehicle-card"><img src="images/car05.jpg" alt="大T"><div class="vehicle-info"><div class="vehicle-title">大T（福斯）</div><div class="vehicle-desc">同上配置</div></div></div>
+    <div class="vehicle-card"><img src="images/car06.jpg" alt="大T"><div class="vehicle-info"><div class="vehicle-title">大T（福斯）</div><div class="vehicle-desc">同上配置</div></div></div>
+
+    <!-- 賓士 Vito（三張） -->
+    <div class="vehicle-card"><img src="images/car07.jpg" alt="Vito"><div class="vehicle-info"><div class="vehicle-title">賓士 Vito</div><div class="vehicle-desc">德系商務小巴，乘坐寬敞穩定，適合機場接送與商務行程。</div></div></div>
+    <div class="vehicle-card"><img src="images/car08.jpg" alt="Vito"><div class="vehicle-info"><div class="vehicle-title">賓士 Vito</div><div class="vehicle-desc">舒適內裝，後艙空間寬敞，適合團體或家庭出行。</div></div></div>
+    <div class="vehicle-card"><img src="images/car09.jpg" alt="Vito"><div class="vehicle-info"><div class="vehicle-title">賓士 Vito</div><div class="vehicle-desc">配有多媒體螢幕、USB 充電等實用設備。</div></div></div>
+
+    <!-- E300（第十張） -->
+    <div class="vehicle-card"><img src="images/car10.jpg" alt="E300"><div class="vehicle-info"><div class="vehicle-title">賓士 E300（五人座）</div><div class="vehicle-desc">豪華房車，適合高階接送，內裝典雅，乘坐體驗極佳。</div></div></div>
   </div>
+  <footer>© 2025 華安車隊</footer>
 </body>
 </html>
