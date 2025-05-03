@@ -3,160 +3,222 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>華安車業</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>華安車業 | 專業包車旅遊服務</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
   <style>
     body {
+      font-family: 'Noto Sans TC', sans-serif;
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #ffffff;
+      background-color: #f8f9fa;
       color: #333;
     }
-
     header {
-      background-color: #e6f6ff;
-      padding: 1rem;
+      background-color: #0099cc;
+      color: white;
+      padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 999;
     }
-
-    .logo {
-      font-weight: bold;
-      font-size: 1.2rem;
-    }
-
-    .menu-btn {
-      font-size: 1.5rem;
-      cursor: pointer;
-      border: none;
-      background: none;
-    }
-
-    nav {
-      display: none;
-      flex-direction: column;
-      background-color: #fff;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      text-align: center;
-      border-top: 1px solid #ccc;
-    }
-
     nav a {
-      padding: 1rem;
+      color: white;
+      margin-left: 1rem;
       text-decoration: none;
-      color: #333;
-    }
-
-    nav a:hover {
-      background-color: #f0f0f0;
-    }
-
-    .hero {
-      padding: 2rem;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 2rem;
       font-weight: bold;
     }
-
-    .hero h2 {
-      color: #666;
-      margin-bottom: 1rem;
+    .hero {
+      background: url('https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 1px 1px 3px #000;
+      flex-direction: column;
+      text-align: center;
     }
-
+    .hero h1 {
+      font-size: 3rem;
+    }
     .hero p {
-      line-height: 1.6;
-      max-width: 600px;
+      font-size: 1.5rem;
+    }
+    .btn {
+      margin-top: 1rem;
+      padding: 0.8rem 1.5rem;
+      background-color: #00bfff;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+    section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
       margin: auto;
     }
-
-    .contact-btn {
-      margin-top: 1.5rem;
-      padding: 0.75rem 1.5rem;
-      border: 2px solid #333;
-      background: none;
-      font-weight: bold;
+    .services, .plans {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    footer {
+      background-color: #0077aa;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 8px;
+    }
+  
+    .hamburger {
+      display: none;
+      flex-direction: column;
       cursor: pointer;
     }
-
-    .footer-img {
-      margin-top: 2rem;
-      background-color: #e6f6ff;
-      padding: 4rem;
-      text-align: center;
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px 0;
     }
-
-    .social-icons {
+    nav {
       display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1rem;
     }
-
-    .social-icons a {
-      text-decoration: none;
-      font-size: 1.2rem;
-      color: #333;
-    }
-
-    @media(min-width: 768px) {
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
       nav {
-        display: flex !important;
-        position: static;
-        flex-direction: row;
-        border: none;
-      }
-
-      .menu-btn {
         display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #0099cc;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        padding: 1rem;
+      }
+      nav a {
+        margin: 0.5rem 0;
+      }
+      nav.active {
+        display: flex;
       }
     }
-  </style>
+
+</style>
 </head>
 <body>
+  <header>
+    <div><strong>華安車業</strong></div>
+    
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
 
-<header>
-  <div class="logo" style="font-size: 2.5rem; font-weight: bold; margin: auto; text-align: center;">華安車業</div>
-  <button class="menu-btn" onclick="toggleMenu()">☰</button>
-  <nav id="menu">
-    <a href="routes.html">行程推薦</a>
-    <a href="prices.html">行程價格</a>
-    <a href="vehicles.html">車子照片</a>
-    <a href="contact.html">聯絡我們</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <h1>【待編輯：主標題】</h1>
-  <h2>【待編輯：副標題】</h2>
-  <p>【待編輯：內文段落】</p>
-  <a href="contact.html"><button class="contact-btn">聯絡我們</button></a>
+<nav>
+      <a href="services.html">服務內容</a>
+      <a href="plans.html">行程方案</a>
+      <a href="contact.html">預約聯絡</a>
+    </nav>
+  </header>
+<section id="brand-intro" style="padding: 2rem; background-color: #f0f8ff; text-align: center;">
+  <h2 style="color: #0099cc;">華安車業的承諾</h2>
+  <p style="max-width: 700px; margin: 1rem auto; font-size: 1.1rem; line-height: 1.6;">
+    在華安車業，「安」不只是名字的一部分，更是我們對每一位乘客的承諾。<br>
+    我們堅持提供專業駕駛、嚴選車輛、貼心服務，只為讓您在每一段旅途中都能感受到安全與平安。<br>
+    無論是機場接送、觀光旅遊、商務包車，華安都是您信賴的首選。<br>
+    讓我們一同啟程，駛向每一個值得記憶的目的地。
+  </p>
 </section>
 
-<section class="footer-img">
-  <div>圖片區塊</div>
-  <div class="social-icons">
-    <a href="#">f</a>
-    <a href="#">t</a>
-    <a href="#">i</a>
-  </div>
-</section>
 
-<script>
-  function toggleMenu() {
-    const menu = document.getElementById('menu');
-    menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
-  }
-</script>
+  <section class="hero">
+    <h1>安心包車，輕鬆出遊</h1>
+    <p>華安~
+         華麗又安全</p>
+    <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">立即預約</button>
+  </section>
+
+  <section id="services">
+    <h2>服務內容</h2>
+    <div class="services">
+      <div class="card">
+        <h3>機場接送</h3>
+        <p>桃園、高雄、台中機場，定點接送，舒適安全。</p>
+      </div>
+      <div class="card">
+        <h3>一日遊行程</h3>
+        <p>高雄、墾丁、台南、台中等熱門景點任您選。</p>
+      </div>
+      <div class="card">
+        <h3>多日旅遊</h3>
+        <p>量身打造客製化旅遊路線，專屬司機隨行。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="plans">
+    <h2>熱門行程方案</h2>
+    <div class="plans">
+      <div class="card">
+        <h3>高雄 → 墾丁一日遊</h3>
+        <p>享受南國風情、海景沙灘、恆春老街。NT$3,500 起</p>
+      </div>
+      <div class="card">
+        <h3>高雄 → 台南文化遊</h3>
+        <p>府城古蹟巡禮、美食小吃之旅。NT$3,200 起</p>
+      </div>
+      <div class="card">
+        <h3>包車自由行</h3>
+        <p>依您的需求調整行程，彈性安排，專人接送。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>預約與聯絡</h2>
+    <p>地址：高雄市鼓山區鼓波街16號</p>
+    <iframe 
+      src="https://www.google.com/maps?q=高雄市鼓山區鼓波街16號&output=embed">
+    </iframe>
+    <form style="margin-top:2rem;">
+      <label>姓名：<br><input type="text" style="width:100%; padding:0.5rem;" required></label><br><br>
+      <label>聯絡電話：<br><input type="tel" style="width:100%; padding:0.5rem;" required></label><br><br>
+      <label>預定日期：<br><input type="date" style="width:100%; padding:0.5rem;" required></label><br><br>
+      <label>需求說明：<br><textarea rows="4" style="width:100%; padding:0.5rem;"></textarea></label><br><br>
+      <button type="submit" class="btn">送出預約</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 華安車業 | 專業包車旅遊服務
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('nav');
+      nav.classList.toggle('active');
+    }
+  </script>
 
 </body>
 </html>

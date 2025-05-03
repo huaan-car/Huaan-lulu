@@ -1,1 +1,84 @@
-<html><body><h1>行程推薦</h1><p>這裡展示推薦行程內容。</p></body></html>
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>行程推薦 - 華安車業</title>
+  <style>
+    body { margin: 0; font-family: 'Segoe UI', sans-serif; background-color: #fff; color: #333; }
+    header { background-color: #e6f6ff; padding: 1rem; text-align: center; position: relative; }
+    .logo { font-size: 2.5rem; font-weight: bold; }
+    .menu-toggle { position: absolute; top: 1.2rem; right: 1.2rem; font-size: 1.5rem; cursor: pointer; }
+    nav { display: none; flex-direction: column; align-items: center; background-color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    nav a { text-decoration: none; color: #333; padding: 1rem; font-weight: bold; border-bottom: 1px solid #eee; width: 100%; text-align: center; }
+    .content { padding: 2rem; text-align: center; }
+    table { margin: 2rem auto; width: 90%; max-width: 800px; border-collapse: collapse; }
+    th, td { padding: 1rem; border: 1px solid #ccc; }
+    th { background-color: #f0f8ff; }
+    caption { font-weight: bold; font-size: 1.2rem; margin-bottom: 0.5rem; }
+    @media(min-width: 768px) {
+      nav { display: flex !important; flex-direction: row; justify-content: center; }
+      nav a { border: none; width: auto; }
+      .menu-toggle { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">華安車業</div>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+</header>
+<nav id="menu">
+  <a href="index.html">首頁</a>
+  <a href="routes.html">行程推薦</a>
+  <a href="prices.html">行程價格</a>
+  <a href="vehicles.html">車子照片</a>
+  <a href="contact.html">聯絡我們</a>
+</nav>
+
+<div class="content">
+  <h1>行程推薦</h1>
+  <p>以下為「嘉義布袋港」接送地區與實際價格，依單程 / 來回 / 多點區分：</p>
+  
+<table>
+  <caption>嘉義布袋港</caption>
+  <tr><th>接送地點</th><th>單程</th><th>來回</th><th>多點</th></tr>
+<tr><td>恆春</td><td>$4700</td><td>$5000</td><td>$5800</td></tr>
+<tr><td>枋寮</td><td>$4700</td><td>$5000</td><td>$5800</td></tr>
+<tr><td>車城</td><td>$5200</td><td>$5500</td><td>$6300</td></tr>
+<tr><td>楓港</td><td>$4300</td><td>$4600</td><td>$5400</td></tr>
+<tr><td>潮州</td><td>$4200</td><td>$4500</td><td>$5300</td></tr>
+<tr><td>萬丹</td><td>$3500</td><td>$3800</td><td>$4600</td></tr>
+<tr><td>屏東市</td><td>$3500</td><td>$3800</td><td>$4600</td></tr>
+<tr><td>長治</td><td>$3000</td><td>$3300</td><td>$4100</td></tr>
+<tr><td>麟洛</td><td>$2700</td><td>$3000</td><td>$3800</td></tr>
+<tr><td>內埔</td><td>$2200</td><td>$2500</td><td>$3300</td></tr>
+<tr><td>高雄市區</td><td>$2100</td><td>$2400</td><td>$3200</td></tr>
+<tr><td>楠梓</td><td>$2000</td><td>$2300</td><td>$3100</td></tr>
+<tr><td>仁武</td><td>$1900</td><td>$2200</td><td>$3000</td></tr>
+<tr><td>鳳山</td><td>$1800</td><td>$2100</td><td>$2900</td></tr>
+<tr><td>鳥松</td><td>$2600</td><td>$2900</td><td>$3700</td></tr>
+<tr><td>左營</td><td>$3000</td><td>$3300</td><td>$4100</td></tr>
+<tr><td>鼓山</td><td>$2600</td><td>$2900</td><td>$3700</td></tr>
+<tr><td>大寮</td><td>$3700</td><td>$4000</td><td>$4800</td></tr>
+<tr><td>岡山</td><td>$2800</td><td>$3100</td><td>$3900</td></tr>
+<tr><td>小港</td><td>$1300</td><td>$1600</td><td>$2400</td></tr>
+<tr><td>旗津</td><td>$1300</td><td>$1600</td><td>$2400</td></tr>
+<tr><td>橋頭</td><td>$2300</td><td>$2600</td><td>$3400</td></tr>
+<tr><td>梓官</td><td>$2800</td><td>$3100</td><td>$3900</td></tr>
+<tr><td>彌陀</td><td>$4300</td><td>$4600</td><td>$5400</td></tr>
+<tr><td>永安</td><td>$5300</td><td>$5600</td><td>$6400</td></tr>
+</table>
+</div>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+  }
+</script>
+
+</body>
+</html>

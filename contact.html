@@ -3,62 +3,42 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>聯絡我們 - 華安車業</title>
+  <title>預約與聯絡 - 華安車業</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
   <style>
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #ffffff;
-      color: #333;
-    }
-
-    header {
-      background-color: #e6f6ff;
-      padding: 1rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 2.5rem;
-      font-weight: bold;
-      text-align: center;
-    }
-
-    .content {
+      font-family: 'Noto Sans TC', sans-serif;
+      background-color: #f8f9fa;
       padding: 2rem;
-      text-align: center;
-    }
-
-    .content h1 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
-
-    .content p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      max-width: 600px;
+      max-width: 800px;
       margin: auto;
+    }
+    h1 {
+      color: #0099cc;
+    }
+    a {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #006699;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-
-<header>
-  <div class="logo">華安車業</div>
-</header>
-
-<div class="content">
-  <h1>聯絡我們</h1>
-  <p>
-    地址：高雄市鼓山區鼓波街16號<br>
-    電話：07-1234567<br>
-    Email：service@huaan.com.tw
-  </p>
-</div>
-
+  <h1>預約與聯絡</h1>
+  
+        <p>地址：高雄市鼓山區鼓波街16號</p>
+        <iframe 
+          src="https://www.google.com/maps?q=高雄市鼓山區鼓波街16號&output=embed"
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <form style="margin-top:2rem;">
+          <label>姓名：<br><input type="text" style="width:100%; padding:0.5rem;" required></label><br><br>
+          <label>聯絡電話：<br><input type="tel" style="width:100%; padding:0.5rem;" required></label><br><br>
+          <label>預定日期：<br><input type="date" style="width:100%; padding:0.5rem;" required></label><br><br>
+          <label>需求說明：<br><textarea rows="4" style="width:100%; padding:0.5rem;"></textarea></label><br><br>
+          <button type="submit" style="padding:0.5rem 1rem; background:#0099cc; color:white; border:none; border-radius:5px;">送出預約</button>
+        </form>
+        
+  <a href="index.html">← 回首頁</a>
 </body>
 </html>
